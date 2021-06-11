@@ -19,27 +19,27 @@ const server = http.createServer((req, res) => {
     <body>
         <h1>Welcome To A Simple Calculator !!!</h1>
         <h3>Please! Input value for a, b and p</h3>
-        <form method="GET" action="http://localhost:${port}/">
+        <form method="GET" action="https://simplecalculateapp.herokuapp.com/">
             <br>
             <label for="value-a">a: </label>
-            <input type="text" id="value-a" name="a" value="${q.query.a}"/>
+            <input type="text" id="value-a" name="a" value=""/>
             <br><br>
             <label for="value-b">b: </label> 
-            <input type="text" id="value-b" name="b" value="${q.query.b}"/>
+            <input type="text" id="value-b" name="b" value=""/>
             <br><br>
             <label for="value-p">p: </label> 
-            <input type="text" id="value-p" name="p" value="${q.query.p}"/>
+            <input type="text" id="value-p" name="p" value=""/>
             <br><br>
             <input type="submit" value="Calculate Now" onclick="formdata()"/><br>
             </form>
             <form>
                 <label for="value-result">Result: </label>
-                <input type="text" id="value-result" value="${result}"/>
+                <input type="text" id="value-result" value=""/>
             </form>
     </body>
     </html>`);
 })
 const dt = require('./module');
 server.listen(port, () => {
-    console.log(`Server running at http://${hostname}:${port}/`)
+    console.log(`Server running at https://simplecalculateapp.herokuapp.com:${port}/`)
 })
