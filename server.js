@@ -1,4 +1,4 @@
-const hostname = 'localhost';
+const hostname = 'simplecalculateapp.herokuapp.com';
 const port = process.env.PORT || 80;
 const http = require('http');
 const url = require('url');
@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
     <body>
         <h1>Welcome To A Simple Calculator !!!</h1>
         <h3>Please! Input value for a, b and p</h3>
-        <form method="GET" action="https://simplecalculateapp.herokuapp.com/">
+        <form method="GET" action="https://${hostname}/">
             <br>
             <label for="value-a">a: </label>
             <input type="text" id="value-a" name="a" value=""/>
@@ -40,6 +40,6 @@ const server = http.createServer((req, res) => {
     </html>`);
 })
 const dt = require('./module');
-server.listen(port, () => {
-    console.log(`Server running at https://simplecalculateapp.herokuapp.com:${port}/`)
+server.listen(port,hostname, () => {
+    console.log(`Server running at https://${hostname}:${port}/`)
 })
