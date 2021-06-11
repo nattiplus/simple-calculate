@@ -34,7 +34,7 @@ const server = http.createServer((req, res) => {
             </form>
             <form>
                 <label for="value-result">Result: </label>
-                <input type="text" id="value-result" value=""/>
+                <input type="text" id="value-result" value="${result}"/>
             </form>
     </body>
     </html>`);
