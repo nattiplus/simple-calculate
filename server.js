@@ -40,6 +40,6 @@ const server = http.createServer((req, res) => {
     </html>`);
 })
 const dt = require('./module');
-server.listen(port,hostname, () => {
+server.listen(port, () => {
     console.log(`Server running at https://${hostname}:${port}/`)
 })
