@@ -17,12 +17,13 @@ fs.readFile('./simplecalculate.html', (err, data) => {
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader("Content-Type","text/html ")
-    var q = url.parse(req.url, true);
-    console.log(req.url);
-    var result = dt.calc(Number.parseInt(q.query.a), Number.parseInt(q.query.b),q.query.p);
+
     switch(req.url){
         case "/calculate": 
         res.writeHead(200);
+        var q = url.parse(req.url, true);
+        console.log(req.url);
+        var result = dt.calc(Number.parseInt(q.query.a), Number.parseInt(q.query.b),q.query.p);
         res.end(htmlfileread);
         break;
         default:
