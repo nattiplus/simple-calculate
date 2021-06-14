@@ -21,10 +21,6 @@ const server = http.createServer((req, res) => {
     switch(req.url){
         case "/calculate": 
         res.writeHead(200);
-        res.end(htmlfileread);
-        break;
-        case req.url: 
-        res.writeHead(200);
         var q = url.parse(req.url, true);
         console.log(req.url);
         var result = dt.calc(Number.parseInt(q.query.a), Number.parseInt(q.query.b),q.query.p);
