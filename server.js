@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
             </head>
             <body>
                 <h1 style="text-align: center;">Home Page</h1>
-                <a href="/calculate" style="text-align: center; text-decoration: underline;">Calculate NOW !!!</a>
+                <p style="text-align: center;"><a href="/calculate">Calculate NOW !!!</a></p>
             </body>
             </html>`);
             break;
