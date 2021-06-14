@@ -34,25 +34,8 @@ const server = http.createServer((req, res) => {
                 <title>Simple Calculate Web</title>
             </head>
             <body>
-                <h1>Welcome To A Simple Calculator !!!</h1>
-                <h3>Please! Input value for a, b and p</h3>
-                <form method="GET" action="https://${hostname}/">
-                    <br>
-                    <label for="value-a">a: </label>
-                    <input type="text" id="value-a" name="a" value=""/>
-                    <br><br>
-                    <label for="value-b">b: </label> 
-                    <input type="text" id="value-b" name="b" value=""/>
-                    <br><br>
-                    <label for="value-p">p: </label> 
-                    <input type="text" id="value-p" name="p" value=""/>
-                    <br><br>
-                    <input type="submit" value="Calculate Now" onclick="formdata()"/><br>
-                    </form>
-                    <form>
-                        <label for="value-result">Result: </label>
-                        <input type="text" id="value-result" value="${result}"/>
-                    </form>
+                <h1 style="text-align: center;">Home Page</h1>
+                <a href="/calculate" style="text-align: center; text-decoration: underline;">Calculate NOW !!!</a>
             </body>
             </html>`);
             break;
