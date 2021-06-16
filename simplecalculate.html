@@ -6,12 +6,6 @@
         <title>Simple Calculate Web</title>
     </head>
     <body>
-        <script>
-            var q = url.parse(req.url, true);
-            console.log(req.url);
-            var result = dt.calc(Number.parseInt(q.query.a), Number.parseInt(q.query.b),q.query.p);
-            document.getElementById("value-result").value = result;
-        </script>
         <h1 style="text-align: center;">Welcome To A Simple Calculator !!!</h1>
         <h3 style="text-align: center;">Please! Input value for a, b and p</h3>
         <form method="GET" action="https://simplecalculateapp.herokuapp.com/calculate" style="display: block; text-align: center;">
@@ -27,6 +21,12 @@
             <br><br>
             <input type="submit" value="Calculate Now" onclick="formdata()"/><br>
             </form>
+            <script>
+                var q = url.parse(req.url, true);
+                console.log(req.url);
+                var result = dt.calc(Number.parseInt(q.query.a), Number.parseInt(q.query.b),q.query.p);
+                document.getElementById("value-result").value = result;
+            </script>
             <form>
                 <label for="value-result">Result: </label>
                 <input type="text" id="value-result" value=""/>
